@@ -60,9 +60,12 @@ require __DIR__ . '/includes/layout_top.php';
     <p style="text-align:center; font-size:13px; margin-top:16px;">
         New here? <a href="/register.php">Create an account</a>
     </p>
-    <p style="text-align:center; font-size:12px; color:var(--muted); margin-top:20px;">
-        Demo logins (remove before this goes anywhere real) —
-        admin@computemart.local / Admin@12345, seller@computemart.local / Seller@12345
-    </p>
 </div>
 <?php require __DIR__ . '/includes/layout_bottom.php'; ?>
+
+<script>
+    console.log("Login info: ")
+    consolde.log("Admin: admin@computemart.local / Admin@12345")
+    consolde.log("Seller: seller@computemart.local / Seller@12345")
+    </script>
+
