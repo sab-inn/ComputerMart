@@ -65,7 +65,7 @@ require __DIR__ . '/includes/layout_top.php';
 
 <script>
     console.log("Login info: ")
-    consolde.log("Admin: admin@computemart.local / Admin@12345")
-    consolde.log("Seller: seller@computemart.local / Seller@12345")
+    console.log("Admin: admin@computemart.local / Admin@12345")
+    console.log("Seller: seller@computemart.local / Seller@12345")
     </script>
 
