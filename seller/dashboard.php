@@ -79,9 +79,28 @@ require __DIR__ . '/../includes/layout_top.php';
             </div>
         </div>
         <div class="field">
-            <label>Image URL (optional)</label>
-            <input type="text" name="image_url" placeholder="https://...">
-        </div>
+    <label>Product Image</label>
+    <select name="image_url">
+        <option value="">No image</option>
+
+        <?php
+        $imageDir = __DIR__ . '/../images/';
+        $images = array_diff(scandir($imageDir), ['.', '..']);
+
+        foreach ($images as $image):
+            $extension = strtolower(pathinfo($image, PATHINFO_EXTENSION));
+
+            if (in_array($extension, ['jpg', 'jpeg', 'png', 'webp', 'gif'])):
+        ?>
+            <option value="images/<?= htmlspecialchars($image) ?>">
+                <?= htmlspecialchars($image) ?>
+            </option>
+        <?php
+            endif;
+        endforeach;
+        ?>
+    </select>
+</div>
         <button type="submit" class="btn btn-accent">List product</button>
     </form>
 </div>

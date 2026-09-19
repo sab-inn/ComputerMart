@@ -62,10 +62,6 @@ function logout_user(): void {
     session_destroy();
 }
 
-// --- CSRF -----------------------------------------------------------
-// Same idea as the .NET version's antiforgery token: a per-session secret
-// that every state-changing request must echo back, so a malicious site
-// can't submit a form or htmx request on the user's behalf.
 
 function csrf_token(): string {
     if (empty($_SESSION['csrf_token'])) {
