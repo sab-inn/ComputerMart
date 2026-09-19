@@ -26,3 +26,5 @@ if ($item) {
 }
 
 render_cart_partial((int)$user['id']);
+<script>
+</script>
